@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="should-be-approved_DRD" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.25.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <decision id="should-be-approved" name="Should the loan be approved?">
+    <decisionTable id="DecisionTable_0pdwuj7">
+      <input id="Input_1" label="client.balance" camunda:inputVariable="client.balance">
+        <inputExpression id="InputExpression_1" typeRef="double">
+          <text>client.balance</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1p3fz27" label="isVIP" camunda:inputVariable="isVIP">
+        <inputExpression id="LiteralExpression_0h8gwcw" typeRef="boolean">
+          <text>isVIP</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="loanApproved" typeRef="boolean" />
+      <rule id="DecisionRule_1yd5cq3">
+        <inputEntry id="UnaryTests_18c0uxx">
+          <text>&gt;3000.0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10fpc4i">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1msxo2f">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07nqspp">
+        <inputEntry id="UnaryTests_0qqdhzr">
+          <text>&lt;=3000.0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dag5xo">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12kl37r">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1s1von2">
+        <inputEntry id="UnaryTests_0mldrmq">
+          <text>&lt;500.0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_068bkpj">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f8wo9g">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uydvl0">
+        <inputEntry id="UnaryTests_0b4n5lf">
+          <text>&gt;=500.0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06jb9w1">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nculiw">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="should-be-approved">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
