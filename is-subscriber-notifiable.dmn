@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_13qpgvu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.25.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <decision id="is_subscriber_notifiable" name="Is Subscriber Notifiable">
+    <decisionTable id="DecisionTable_0kghbvo" hitPolicy="FIRST">
+      <input id="Input_1" biodi:width="406" camunda:inputVariable="subscriberAddedEvent">
+        <inputExpression id="InputExpression_1" typeRef="string" expressionLanguage="feel">
+          <text>subscriberAddedEvent.newSubscriber.brandId</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="isNotifiable" typeRef="boolean" />
+      <rule id="DecisionRule_0hpebck">
+        <inputEntry id="UnaryTests_0a0qoxv">
+          <text>"ST"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1p9hlyf">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kefjxh">
+        <inputEntry id="UnaryTests_0hw7b2y">
+          <text>"SM"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13c07qw">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dsgthp">
+        <inputEntry id="UnaryTests_129cvcf">
+          <text>"TF"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qqtjeu">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nrvqgw">
+        <inputEntry id="UnaryTests_05fr7si">
+          <text>"NT"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nwglgk">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gl9in0">
+        <inputEntry id="UnaryTests_18ipvax">
+          <text>"TW"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0w6lyaa">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k44xw4">
+        <inputEntry id="UnaryTests_1g44f6c">
+          <text>"GS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16v8c9n">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ef8tg0">
+        <inputEntry id="UnaryTests_106bnph">
+          <text>"WF"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v7egv0">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y9ltda">
+        <inputEntry id="UnaryTests_05dccdp">
+          <text>"WM"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mfqlxs">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bc8cv3">
+        <inputEntry id="UnaryTests_1g5o50i">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_037qlow">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="is_subscriber_notifiable">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -10,7 +10,7 @@
       <output id="Output_1" name="isVIP" typeRef="boolean" />
       <rule id="DecisionRule_1wqb07h">
         <inputEntry id="UnaryTests_0ifye5z">
-          <text>&gt;2000.0</text>
+          <text>&gt;1000.0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1lycn68">
           <text>true</text>
@@ -18,7 +18,7 @@
       </rule>
       <rule id="DecisionRule_0fqb6ss">
         <inputEntry id="UnaryTests_0q8t1gc">
-          <text>&lt;= 2000.0</text>
+          <text>&lt;= 1000.0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0bez1vg">
           <text>false</text>
