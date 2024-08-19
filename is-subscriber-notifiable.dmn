@@ -72,6 +72,14 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1ngaqh3">
+        <inputEntry id="UnaryTests_0lrrvzd">
+          <text>"XF"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01kg4d6">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1bc8cv3">
         <inputEntry id="UnaryTests_1g5o50i">
           <text></text>
